@@ -1,35 +1,51 @@
-site_name: RAS 304 Rebecca Baker Data Sheet
-site_url: https://ras-embedded-systems.github.io/RAS304DataSheetTemplate/
-repo_url: https://github.com/ras-embedded-systems/RAS304DataSheetTemplate
+
+site_name: RAS 304 - Rebecca Baker Individual Datasheet
+site_description: Driver Nano 2 - Team 102 Robotic Spider Leg
+site_url: https://rab2254-art.github.io/rbaker54_RAS304_F26/
+repo_url: https://github.com/rab2254-art/rbaker54_RAS304_F26
 edit_uri: edit/main/docs/
+
 theme:
   name: material
   custom_dir: custom_theme/
   palette:
-    primary: blue
-    accent: indigo
+    - scheme: default
+      primary: green
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   font:
     text: Roboto
   logo: static/logo304.svg
   favicon: static/logo304.png
-
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - toc.follow    
     - navigation.top
     - navigation.path
     - navigation.indexes
-    - navigation.prune
-    - content.action.edit
     - navigation.footer
-#    - navigation.sections
-#    - navigation.expand
-#    - navigation.instant # doesn't work that well
+    - toc.follow
+    - content.action.edit
+
+nav:
+  - Home: index.md
+  - Block Diagram: 01-Block-Diagram/Block-Diagram.md
+  - Component Selection: 02-Component-Selection/Component-Selection.md
+  - Bill of Materials: 03-BOM/BOM.md
+  - Schematic Design: 04-Schematic/schematic.md
+  - Power Budget: 05-Power-Budget/Power-Budget.md
 
 markdown_extensions:
-  - attr_list #add attributes using curly brackets to images, see https://squidfunk.github.io/mkdocs-material/reference/images/
-  - md_in_html # see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - attr_list
+  - md_in_html
   - footnotes
   - pymdownx.arithmatex:
       generic: true
@@ -40,30 +56,15 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-draft_docs: |
-  **/*_unpublished.md
-  **/*_draft.md
-  **/*_draft**
-  
 plugins:
   - search
-  - glightbox # allow resize images, see https://squidfunk.github.io/mkdocs-material/reference/images/
-
-extra_css:
-  - stylesheets/extra.css  
+  - glightbox
 
 extra_javascript:
- - javascripts/mathjax.js
- - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-    
-not_in_nav: |
-  static
-  
-copyright: "Copyright &copy; 2025 team-name-here"
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   generator: false
-  social:
-    - icon: fontawesome/regular/file-code
-      link: /2025_fall
-      name: 2023 Site    
+
+copyright: "Copyright &copy; 2026 Rebecca Baker"
